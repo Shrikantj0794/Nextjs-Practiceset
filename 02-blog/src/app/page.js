@@ -1,4 +1,5 @@
 'use client' //must import use client directive for events run on client side server
+import Link from 'next/link';
 import styles from './page.module.css'
 import { useState } from 'react';
 export default function Home() {
@@ -15,6 +16,11 @@ export default function Home() {
      <h2>{name1}</h2>
      {/* On click id a Event */}
      <button onClick={change}>Click Me</button>
+
+     <Link href="/login">Go to Login page</Link>
+     <br></br>
+     <br></br>
+     <Link href="/about">Go to About page</Link>
     </main>
   )
 }
