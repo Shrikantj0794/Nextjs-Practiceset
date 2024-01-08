@@ -7,6 +7,8 @@ function page() {
       <br/>
       <br/>
       <Link href="/about/aboutclg">Go to About college page</Link>
+      <br />
+      <Link href="/about/aboutstu">Go to About student page</Link>
     </div>
   )
 }
