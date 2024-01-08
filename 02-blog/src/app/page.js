@@ -2,7 +2,15 @@
 import Link from 'next/link';
 import styles from './page.module.css'
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+
 export default function Home() {
+  // page render using Button Navigation
+  const router = useRouter(); 
+  const renderTo = ()=>{
+    return(
+    router.push("/login")
+  )}
   // state
   const [name1, setname1] = useState('My name is Shri');
 
@@ -18,9 +26,10 @@ export default function Home() {
      <button onClick={change}>Click Me</button>
 
      <Link href="/login">Go to Login page</Link>
-     <br></br>
-     <br></br>
+    
      <Link href="/about">Go to About page</Link>
+  
+    <button onClick={renderTo}>Go to Ligin page</button>
     </main>
   )
 }
