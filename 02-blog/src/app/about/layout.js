@@ -1,5 +1,6 @@
 'use client'
 
+import Link from "next/link";
 import { usePathname } from "next/navigation"
 
 export default function Layout({children}){
@@ -16,6 +17,7 @@ export default function Layout({children}){
                 <li><a href="/about">About</a></li>
                 <li><a href="/about/aboutclg">About College</a></li>
                 <li><a href="/about/aboutstu">About Student</a></li>
+                <li><a href="/about/studentlist">Student Daitals</a></li>
             </ul> : null
         }
         {children}
