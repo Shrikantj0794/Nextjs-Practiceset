@@ -4,15 +4,15 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 export default function Home() {
-  const [change, setchange] = useState({backgroundColor:"red"});
+  const [colore, setColore] = useState("red");
 
   return (
 
     <main className='main'>
-      <Link href='/productlist' style={change} > Go To Product page client side </Link>
-      <button onClick={()=>setchange({backgroundColor:"blue"})}>Change Colore</button>
+      <Link href='/productlist'> Go To Product page client side </Link>
       <Link href='/2productlist'> Go To Product page server side </Link>
-      <h1 className={Custom.h1}>hello My name is shri</h1>
+      <h1 className={colore=='red'?Custom.red:Custom.green}>Hello, My name is Shrikant</h1>
+      <button onClick={()=>setColore("green")}>change Colore</button>
     </main>
   )
 }
