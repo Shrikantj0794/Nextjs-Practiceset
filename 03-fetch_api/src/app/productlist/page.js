@@ -20,7 +20,9 @@ export default function Page(){
                 product.map((items)=>{
                     // must write return keyword
                     return(
-                    <h3>Name: {items.title}</h3>
+                        <div>
+                            <h3>Name: {items.title}</h3>
+                        </div>
                     )
                 })
             }
