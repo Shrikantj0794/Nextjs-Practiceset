@@ -1,6 +1,5 @@
-export default async function GetData(){
+export default async function getData(){
     const fetchd= await fetch('https://dummyjson.com/carts');
-    return (
-        fetchd.json()
-        )
+    return fetchd.json()
+
 }

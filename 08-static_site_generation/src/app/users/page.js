@@ -1,15 +1,16 @@
-import GetData from "../../../service/getdata"
+import getData from "../../../service/getdata";
 
 export default async function Page(){
-    const getDataList = GetData();
-    const carts = await getDataList;  
+    const getDataList = getData();
+    const carts = await getDataList; 
+    
     return(
         <div>
             <h1>Users page</h1>
             {
-                carts.map((items)=>{
+                carts.map((cart)=>{
                     return(
-                        <h3>Name: {items.discountedTotal}</h3>
+                        <h3>Name: {cart.discountedTotal}</h3>
                     )
                 })
             }
